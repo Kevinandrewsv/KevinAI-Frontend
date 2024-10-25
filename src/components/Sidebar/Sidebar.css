@@ -1,0 +1,101 @@
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.sidebar img {
+    width: 24px; /* Slightly larger for visibility */
+}
+
+.sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Add a smooth transition */
+}
+
+.sidebar .menu:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.sidebar .new-chat {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(145deg, #e0e6ee, #d2dae6); /* Subtle gradient */
+    border-radius: 50px;
+    font-size: 15px;
+    color: #4a4a4a;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background 0.3s, transform 0.2s;
+}
+
+.sidebar .new-chat:hover {
+    background: linear-gradient(145deg, #d2dae6, #e0e6ee); /* Invert gradient on hover */
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+.sidebar .recent {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 2s;
+}
+
+.sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: #282828;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background 0.3s, box-shadow 0.3s; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+.sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.sidebar .bottom-item {
+    padding-right: 10px;
+    cursor: pointer;
+    color: #4a4a4a;
+    transition: color 0.2s, transform 0.2s; /* Smooth transition for color and scale */
+}
+
+.sidebar .bottom-item:hover {
+    color: #0a66c2; /* Add accent color on hover */
+    transform: translateX(5px); /* Slight shift effect on hover */
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+}

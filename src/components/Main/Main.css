@@ -1,0 +1,254 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+    background: linear-gradient(120deg, #f0f4f9, #e6eaf1), 
+                url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="20" cy="20" r="2" fill="%23d1d5db"%3E%3C/circle%3E%3C/svg%3E');
+    background-size: cover, 80px 80px; /* Pattern size */
+}
+
+
+.main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #4a4a4a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main .nav .title {
+    font-size: 28px; /* Increase font size */
+    font-weight: 700; /* Make text bold */
+    background: linear-gradient(16deg, #ff5546, #60ff4b); /* Gradient background */
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* Standard syntax */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for other browsers */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Enhanced text shadow */
+}
+
+.main .nav img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.main .nav img:hover {
+    transform: scale(1.1);
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.greet {
+    margin: 60px 0;
+    font-size: 60px;
+    color: #333;
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+}
+
+.greet span {
+    background: linear-gradient(16deg, #ff5546, #60ff4b);
+    -webkit-background-clip: text; /* For Safari */
+    background-clip: text; /* Standard syntax */
+    -webkit-text-fill-color: transparent; /* For Safari */
+    color: transparent; /* Fallback for other browsers */
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    height: 220px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+    color: #4a4a4a;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.card img {
+    width: 40px;
+    padding: 8px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    bottom: 15px;
+    right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.search-box input::placeholder {
+    color: #9a9a9a;
+}
+
+.search-box div {
+    display: flex;
+    gap: 15px;
+}
+
+.search-box img {
+    width: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.search-box img:hover {
+    transform: scale(1.1);
+}
+
+.bottom-info {
+    font-size: 14px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: 300;
+    color: #7a7a7a;
+}
+
+.result {
+    padding: 0 5%;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.result img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.animated-bg {
+    border-radius: 6px;
+    background-color: #e6e6e6;
+    animation: loader 3s infinite linear;
+    background: linear-gradient(to right, #d1d5db, #f3f4f6, #d1d5db);
+    background-size: 800px 50px;
+    height: 24px;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 800px 0;
+    }
+}
+
+.result-data p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+@media (max-width: 600px) {
+    .main-bottom input {
+        flex: none;
+        width: 140px;
+    }
+
+    .main-bottom img {
+        width: 20px;
+    }
+
+    .search-box {
+        padding: 6px 12px;
+    }
+
+    .search-box div {
+        gap: 5px;
+    }
+
+    .greet {
+        font-size: 42px;
+    }
+
+    .card {
+        height: 180px;
+        padding: 15px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+}
